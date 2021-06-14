@@ -11,6 +11,9 @@
 		0C12EF1725AC723700567637 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C12EF1625AC723700567637 /* OpenGL.framework */; };
 		0C12EF1925AC72BE00567637 /* libGLEW.2.1.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C12EF1825AC72BE00567637 /* libGLEW.2.1.0.dylib */; };
 		0C12EF2025AC781200567637 /* libglfw.3.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C12EF1B25AC72F400567637 /* libglfw.3.3.dylib */; };
+		0C462C152677A42600714193 /* TrangleWindow.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C462C132677A42600714193 /* TrangleWindow.cpp */; };
+		0C5375062677703D00251C7C /* mesh.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C5375042677703D00251C7C /* mesh.cpp */; };
+		0C5375132677799400251C7C /* SimpleShader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C5375112677799400251C7C /* SimpleShader.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -32,6 +35,15 @@
 		0C12EF1825AC72BE00567637 /* libGLEW.2.1.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libGLEW.2.1.0.dylib; path = ../../../../../../usr/local/Cellar/glew/2.1.0_1/lib/libGLEW.2.1.0.dylib; sourceTree = "<group>"; };
 		0C12EF1B25AC72F400567637 /* libglfw.3.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.3.3.dylib; path = ../../../../../../usr/local/Cellar/glfw/3.3.2/lib/libglfw.3.3.dylib; sourceTree = "<group>"; };
 		0C12EF2225AC786D00567637 /* OpenGL_tut_Udemy.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = OpenGL_tut_Udemy.entitlements; sourceTree = "<group>"; };
+		0C462C03267781F700714193 /* shader1.vert */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = shader1.vert; path = "../../../../../../Library/Developer/Xcode/DerivedData/OpenGL_tut_Udemy-djojuezgudatqngtxvlpxkgbpods/Build/Products/Debug/Shaders/shader1.vert"; sourceTree = "<group>"; };
+		0C462C042677822700714193 /* shader1.frag */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = shader1.frag; path = "../../../../../../Library/Developer/Xcode/DerivedData/OpenGL_tut_Udemy-djojuezgudatqngtxvlpxkgbpods/Build/Products/Debug/Shaders/shader1.frag"; sourceTree = "<group>"; };
+		0C462C082677995900714193 /* shader2.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = shader2.frag; path = OpenGL_tut_Udemy/shader2.frag; sourceTree = "<group>"; };
+		0C462C132677A42600714193 /* TrangleWindow.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = TrangleWindow.cpp; sourceTree = "<group>"; };
+		0C462C142677A42600714193 /* TrangleWindow.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = TrangleWindow.hpp; sourceTree = "<group>"; };
+		0C5375042677703D00251C7C /* mesh.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = mesh.cpp; sourceTree = "<group>"; };
+		0C5375052677703D00251C7C /* mesh.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = mesh.hpp; sourceTree = "<group>"; };
+		0C5375112677799400251C7C /* SimpleShader.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = SimpleShader.cpp; sourceTree = "<group>"; };
+		0C5375122677799400251C7C /* SimpleShader.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = SimpleShader.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +63,7 @@
 		0C12EF0025AC71CC00567637 = {
 			isa = PBXGroup;
 			children = (
+				0C462C082677995900714193 /* shader2.frag */,
 				0C12EF0B25AC71CC00567637 /* OpenGL_tut_Udemy */,
 				0C12EF0A25AC71CC00567637 /* Products */,
 				0C12EF1525AC723600567637 /* Frameworks */,
@@ -68,8 +81,15 @@
 		0C12EF0B25AC71CC00567637 /* OpenGL_tut_Udemy */ = {
 			isa = PBXGroup;
 			children = (
+				0C462C02267781CD00714193 /* Shaders */,
 				0C12EF2225AC786D00567637 /* OpenGL_tut_Udemy.entitlements */,
+				0C5375112677799400251C7C /* SimpleShader.cpp */,
+				0C5375122677799400251C7C /* SimpleShader.hpp */,
 				0C12EF0C25AC71CC00567637 /* main.cpp */,
+				0C5375042677703D00251C7C /* mesh.cpp */,
+				0C5375052677703D00251C7C /* mesh.hpp */,
+				0C462C132677A42600714193 /* TrangleWindow.cpp */,
+				0C462C142677A42600714193 /* TrangleWindow.hpp */,
 			);
 			path = OpenGL_tut_Udemy;
 			sourceTree = "<group>";
@@ -82,6 +102,15 @@
 				0C12EF1625AC723700567637 /* OpenGL.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0C462C02267781CD00714193 /* Shaders */ = {
+			isa = PBXGroup;
+			children = (
+				0C462C03267781F700714193 /* shader1.vert */,
+				0C462C042677822700714193 /* shader1.frag */,
+			);
+			path = Shaders;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,7 +169,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C5375062677703D00251C7C /* mesh.cpp in Sources */,
+				0C5375132677799400251C7C /* SimpleShader.cpp in Sources */,
 				0C12EF0D25AC71CC00567637 /* main.cpp in Sources */,
+				0C462C152677A42600714193 /* TrangleWindow.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
